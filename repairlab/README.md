@@ -88,7 +88,7 @@ python -m unittest discover -s tests -v
 GitHub хранит исходный код. **GitHub Pages не запускает Python и SQLite**. Чтобы форма работала по публичной ссылке, разместите весь проект как Python Web Service, например на Render:
 
 1. Загрузите папку проекта в отдельный репозиторий GitHub (или используйте указанную папку существующего репозитория).
-2. В Render подключите репозиторий и создайте Blueprint из `render.yaml`. Если проект находится в подпапке `repairlab`, задайте **Blueprint Path: repairlab/render.yaml** и **Root Directory: repairlab** в настройках сервиса (либо создайте отдельный репозиторий из содержимого папки).
+2. В Render подключите репозиторий и создайте Blueprint. Для текущего репозитория задайте **Blueprint Path: repairlab/render.yaml**. В конфигурации уже указан `rootDir: repairlab`. Если перенесёте содержимое папки в корень отдельного репозитория, удалите строку `rootDir: repairlab` и используйте Blueprint Path `render.yaml`.
 3. Проверьте тариф перед созданием. Конфигурация использует **платный Starter и постоянный диск 1 ГБ**. Автоматически платный сервис в рамках этой работы не создавался. Цена зависит от условий хостинга.
 4. Build: `pip install -r requirements.txt`. Start: `gunicorn app:application --bind 0.0.0.0:$PORT --workers 1 --threads 4`.
 5. Подключите постоянный диск к `/var/data`, переменная `DB_PATH=/var/data/requests.sqlite3`. Не храните SQLite на временном диске: заявки исчезнут после пересборки.

@@ -1,6 +1,7 @@
 services:
   - type: web
     name: repairlab
+    rootDir: repairlab
     runtime: python
     plan: starter
     buildCommand: pip install -r requirements.txt
