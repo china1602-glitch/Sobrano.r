@@ -4,10 +4,10 @@
 
 ## Включить один раз
 
-1. Откройте https://github.com/china1602-glitch/codex-workspace/settings/pages . Это репозиторий RepairLab, не Mira Beauty.
+1. Откройте https://github.com/china1602-glitch/Sobrano.r/settings/pages . Это репозиторий RepairLab, не Mira Beauty.
 2. В Build and deployment → Source выберите **GitHub Actions**.
 3. Откройте Actions → **Publish RepairLab on GitHub Pages** → **Run workflow** → main → **Run workflow**.
-4. Дождитесь зелёных build и deploy. Адрес после успешной публикации: https://china1602-glitch.github.io/codex-workspace/ .
+4. Дождитесь зелёных build и deploy. Адрес после успешной публикации: https://china1602-glitch.github.io/Sobrano.r/ .
 
 Если первый deploy завершился ошибкой из-за не включённого Pages, сначала выберите Source: GitHub Actions и повторите workflow.
 
